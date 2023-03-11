@@ -24,7 +24,7 @@ function Sidebar() {
         href="#home"
       >
         <p className="font-extrabold text-xl">
-          M<span className="text-blue-700">.</span>
+          M.
         </p>
       </motion.a>
       <motion.nav
