@@ -18,7 +18,7 @@ function PageLayout() {
       )}
       {!isDesktop && (
         <>
-          <main className="w-[90%] mx-auto my-[3rem]">
+          <main className="relative w-[90%] mx-auto my-[3rem]">
             <Outlet />
           </main>
           <BottomNav />

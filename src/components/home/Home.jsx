@@ -59,8 +59,10 @@ function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1.2 }}
-            className={`text-[2rem] leading-[2.4rem] text-justify ${
-              isDesktop ? "max-w-[45.5rem]" : "max-w-full"
+            className={`text-[2rem] leading-[2.4rem]  ${
+              isDesktop
+                ? "max-w-[45.5rem] text-justify"
+                : "max-w-full text-left"
             } `}
           >
             I am a Frontend Engineer based in Nigeria. I have always been
