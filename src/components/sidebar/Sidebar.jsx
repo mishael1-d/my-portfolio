@@ -8,6 +8,7 @@ import {
 } from "../../utils/icons";
 import "./sidebar.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -39,12 +40,12 @@ function Sidebar() {
               transition={{ delay: 0.6, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <HomeIcon />
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
@@ -52,12 +53,12 @@ function Sidebar() {
               transition={{ delay: 0.7, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <AboutIcon />
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
