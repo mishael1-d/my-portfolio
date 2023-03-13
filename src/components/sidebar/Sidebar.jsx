@@ -40,7 +40,7 @@ function Sidebar() {
               className="nav__item"
             >
               <a
-                href="#home"
+                href="/"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <HomeIcon />
@@ -53,7 +53,7 @@ function Sidebar() {
               className="nav__item"
             >
               <a
-                href="#home"
+                href="/about"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <AboutIcon />
@@ -66,7 +66,7 @@ function Sidebar() {
               className="nav__item"
             >
               <a
-                href="#home"
+                href="/"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <WorkIcon />
