@@ -15,7 +15,7 @@ function Sidebar() {
       initial={{ x: "-100vw", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed left-0 top-0 bg-slate-50 p-[2.5rem] w-[60px] min-h-screen flex flex-col justify-between items-center z-10`}
+      className={`fixed left-0 top-0 bg-white p-[2.5rem] w-[8rem] min-h-screen flex flex-col justify-between items-center z-10`}
     >
       <motion.a
         initial={{ y: "-100vh" }}
@@ -23,9 +23,7 @@ function Sidebar() {
         transition={{ delay: 0.5 }}
         href="#home"
       >
-        <p className="font-extrabold text-xl">
-          M.
-        </p>
+        <p className="font-extrabold text-[2.5rem]">M.</p>
       </motion.a>
       <motion.nav
         initial={{ opacity: 0 }}
@@ -34,7 +32,7 @@ function Sidebar() {
         className="nav"
       >
         <div className="nav__menu">
-          <ul className="nav__list flex flex-col gap-[1.5rem]">
+          <ul className="nav__list flex flex-col gap-[2.5rem]">
             <motion.li
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -43,7 +41,7 @@ function Sidebar() {
             >
               <a
                 href="#home"
-                className="text-[1.5rem] font-700 hover:text-blue-700"
+                className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <HomeIcon />
               </a>
@@ -56,7 +54,7 @@ function Sidebar() {
             >
               <a
                 href="#home"
-                className="text-[1.5rem] font-700 hover:text-blue-700"
+                className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <AboutIcon />
               </a>
@@ -69,7 +67,7 @@ function Sidebar() {
             >
               <a
                 href="#home"
-                className="text-[1.5rem] font-700 hover:text-blue-700"
+                className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <WorkIcon />
               </a>
@@ -82,7 +80,7 @@ function Sidebar() {
             >
               <a
                 href="#home"
-                className="text-[1.5rem] font-700 hover:text-blue-700"
+                className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <BlogIcon />
               </a>
@@ -95,7 +93,7 @@ function Sidebar() {
             >
               <a
                 href="#home"
-                className="text-[1.5rem] font-700 hover:text-blue-700"
+                className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <ContactIcon />
               </a>
@@ -106,10 +104,10 @@ function Sidebar() {
       <motion.div
         initial={{ y: "100vh" }}
         animate={{ y: 0 }}
-        transition={{ delay: 1, duration:0.5 }}
+        transition={{ delay: 1, duration: 0.5 }}
         className="nav__footer"
       >
-        <span className="text-sm text-slate-400 -rotate-180 copyright">
+        <span className="text-[1.2rem] text-slate-400 -rotate-180 copyright">
           &copy; 2023. Mishael Dada
         </span>
       </motion.div>

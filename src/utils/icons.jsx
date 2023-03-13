@@ -1,13 +1,13 @@
-import {
-  AiOutlineHome,
-  AiOutlineUser,
-  AiOutlineContacts,
-} from "react-icons/ai";
-import { MdWorkOutline } from "react-icons/md";
-import { FiEdit } from "react-icons/fi";
+import { AiOutlineUser, AiFillGithub,AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
+import { FiEdit, FiHome } from "react-icons/fi";
+import { TbBriefcase, TbHeadset, TbSend } from "react-icons/tb";
 
-export const HomeIcon = () => <AiOutlineHome />;
-export const AboutIcon = () => <AiOutlineUser />;
-export const WorkIcon = () => <MdWorkOutline />;
-export const ContactIcon = () => <AiOutlineContacts />;
-export const BlogIcon = () => <FiEdit />;
+export const HomeIcon = () => <FiHome size={25} color="#363636" />;
+export const AboutIcon = () => <AiOutlineUser size={25} color="#363636" />;
+export const WorkIcon = () => <TbBriefcase size={25} color="#363636" />;
+export const ContactIcon = () => <TbHeadset size={25} color="#363636" />;
+export const BlogIcon = () => <FiEdit size={25} color="#363636" />;
+export const GithubIcon = () => <AiFillGithub size={25} color="#363636" />;
+export const LinkedInIcon = () => <AiFillLinkedin size={25} color="#363636" />;
+export const TwitterIcon = () => <AiOutlineTwitter size={25} color="#363636" />;
+export const SendIcon = () => <TbSend size={22} color="#ffffff" />;
