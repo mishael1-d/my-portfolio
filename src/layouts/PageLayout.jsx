@@ -6,7 +6,7 @@ import BottomNav from "../components/bottomNav/BottomNav";
 import BottomDotNav from "../components/bottomDotNav/BottomDotNav";
 
 function PageLayout() {
-  const location = useLocation()
+  const location = useLocation();
   const isDesktop = useMediaQuery("(min-width: 960px)");
   return (
     <>
@@ -21,7 +21,7 @@ function PageLayout() {
       )}
       {!isDesktop && (
         <>
-          <main className="relative w-[90%] mx-auto my-[3rem]">
+          <main className="relative w-[90%] mx-auto my-[3rem] mb-[7rem]">
             <Outlet />
           </main>
           <BottomNav />
