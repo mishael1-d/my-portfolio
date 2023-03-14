@@ -8,6 +8,7 @@ import {
 } from "../../utils/icons";
 import { motion } from "framer-motion";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import "./home.css";
 
 function Home() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
@@ -113,7 +114,7 @@ function Home() {
             transition={{ duration: 1 }}
           >
             <picture>
-              <img src="/assets/hero-img.png" alt="" />
+              <img src="/assets/about-img.png" alt="" className="home__img" />
             </picture>
           </motion.div>
         ) : (
@@ -124,7 +125,7 @@ function Home() {
             transition={{ duration: 1 }}
           >
             <picture>
-              <img src="/assets/hero-img.png" alt="" />
+              <img src="/assets/about-img.png" alt="" className="home__img" />
             </picture>
           </motion.div>
         )}
