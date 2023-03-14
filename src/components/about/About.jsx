@@ -1,6 +1,7 @@
 import React from "react";
 import Buttons from "../../UIComponents/Buttons";
 import { motion } from "framer-motion";
+import { DocIcon } from "../../utils/icons";
 
 function About() {
   return (
@@ -22,7 +23,7 @@ function About() {
             initial={{ y: "-100vh" }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-black text-[4.8rem] font-bold"
+            className="text-black text-[4.8rem]"
           >
             About Me
           </motion.h3>
@@ -51,7 +52,7 @@ function About() {
             Pupilbase to Hydreate, each project represents a different aspect of
             my abilities and demonstrates my versatility as a Frontend Engineer.
           </motion.p>
-          <Buttons text="download CV" />
+          <Buttons text="download CV" icon={<DocIcon />} />
         </div>
       </div>
     </div>
