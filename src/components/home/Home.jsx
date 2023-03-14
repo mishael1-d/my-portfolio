@@ -114,7 +114,7 @@ function Home() {
             transition={{ duration: 1 }}
           >
             <picture>
-              <img src="/assets/about-img.png" alt="" className="home__img" />
+              <img src="/assets/hero-img.png" alt="" className="home__img" />
             </picture>
           </motion.div>
         ) : (
@@ -125,7 +125,7 @@ function Home() {
             transition={{ duration: 1 }}
           >
             <picture>
-              <img src="/assets/about-img.png" alt="" className="home__img" />
+              <img src="/assets/hero-img.png" alt="" className="home__img" />
             </picture>
           </motion.div>
         )}
