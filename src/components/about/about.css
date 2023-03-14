@@ -1,0 +1,15 @@
+.about__image {
+  animation: animate__image 6s ease-in-out infinite;
+}
+
+@keyframes animate__image {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
