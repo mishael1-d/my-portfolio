@@ -78,7 +78,11 @@ function About() {
             animate={{ y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <Buttons text="download CV" icon={<DocIcon />} />
+            <Buttons
+              text="download CV"
+              icon={<DocIcon />}
+              link="/assets/Mishael-CV.pdf"
+            />
           </motion.div>
         </div>
       </div>
