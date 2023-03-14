@@ -2,7 +2,7 @@ import { routes } from "../../utils/routes";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-function BottomDotNav({ pathname, setPathname }) {
+function BottomDotNav({ pathname }) {
   return (
     <motion.div
       initial={{ y: "-100vh" }}
@@ -13,7 +13,7 @@ function BottomDotNav({ pathname, setPathname }) {
       <div className="flex gap-[0.6rem]">
         {routes.map((data) => {
           return (
-            <Link to={data.path} onClick={() => setPathname(data.path)}>
+            <Link to={data.path}>
               <div
                 className={`w-[2.6rem] h-[4px] ${
                   pathname === data.path ? "bg-[#363636]" : "bg-[#939393]"
