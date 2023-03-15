@@ -66,12 +66,12 @@ function Sidebar() {
               transition={{ delay: 0.9, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="/"
+              <Link
+                to="/portfolio"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <WorkIcon />
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
