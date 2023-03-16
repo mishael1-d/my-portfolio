@@ -23,10 +23,10 @@ function BottomNav() {
       <Link to="/about">
         <AboutIcon />
       </Link>
-      <Link to="/">
+      <Link to="/portfolio">
         <WorkIcon />
       </Link>
-      <Link to="/">
+      <Link to="/blog">
         <BlogIcon />
       </Link>
       <Link to="/">

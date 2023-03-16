@@ -3,7 +3,7 @@ import Buttons from "../../UIComponents/Buttons";
 import { motion } from "framer-motion";
 import { DocIcon } from "../../utils/icons";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import "./about.css"
+import "./about.css";
 
 function About() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
@@ -20,12 +20,20 @@ function About() {
             className={`relative w-[40rem]`}
           >
             <picture className=" relative z-[1] scale-[.95] ">
-              <img src="/assets/about-img.png" alt="" className="about__image" />
+              <img
+                src="/assets/about-img.png"
+                alt=""
+                className="about__image"
+              />
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#363636] z-[-1] scale-[.97] rounded-[1.5rem]"></div>
             </picture>
           </motion.div>
         ) : null}
-        <div className="relative max-w-[64rem] flex flex-col gap-[1.7rem]">
+        <div
+          className={`relative ${
+            !isDesktop ? "max-w-full" : "max-w-[64rem]"
+          } flex flex-col gap-[1.7rem]`}
+        >
           <motion.h3
             initial={{ y: "-100vh" }}
             animate={{ y: 0 }}
@@ -41,11 +49,15 @@ function About() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1 }}
-              className={`relative w-full`}
+              className={`relative w-full flex justify-center`}
             >
-              <picture className=" relative z-[1] scale-[.95] ">
-              <img src="/assets/about-img.png" alt="" className="about__image" />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#363636] z-[-1] scale-[.97] rounded-[1.5rem]"></div>
+              <picture className=" relative z-[1] ">
+                <img
+                  src="/assets/about-img.png"
+                  alt=""
+                  className="about__image"
+                />
+                <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#363636] z-[-1] rounded-[1.5rem]"></div>
               </picture>
             </motion.div>
           ) : null}

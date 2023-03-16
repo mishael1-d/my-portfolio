@@ -12,13 +12,17 @@ html {
 .app-container {
   max-width: 115.3rem;
   margin-right: 10rem;
-  overflow: visible;
+  /* overflow: auto; */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 821px) {
   .app-container {
     max-width: 100%;
     margin-right: 0;
     overflow: visible;
   }
+}
+
+.app-container::-webkit-scrollbar {
+  display: none !important;
 }

@@ -4,7 +4,7 @@ import { projectData } from "./project.data";
 import "./portfolio.css";
 function Portfolio() {
   return (
-    <div className="app-container relative bottom-[2rem]">
+    <div className="app-container pb-[4rem]">
       <motion.h3
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}

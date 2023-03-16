@@ -3,6 +3,7 @@ import {
   AiFillGithub,
   AiFillLinkedin,
   AiOutlineTwitter,
+  AiOutlineShareAlt
 } from "react-icons/ai";
 import { FiEdit, FiHome } from "react-icons/fi";
 import { TbBriefcase, TbHeadset, TbSend } from "react-icons/tb";
@@ -20,3 +21,4 @@ export const SendIcon = () => <TbSend size={22} color="#ffffff" />;
 export const DocIcon = () => (
   <HiOutlineDocumentDownload size={22} color="#ffffff" />
 );
+export const ShareIcon =()=> <AiOutlineShareAlt size={25} color="#363636"/>

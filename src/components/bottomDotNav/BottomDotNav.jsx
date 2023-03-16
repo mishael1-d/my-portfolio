@@ -8,7 +8,7 @@ function BottomDotNav({ pathname }) {
       initial={{ y: "-100vh" }}
       animate={{ y: 0 }}
       transition={{ delay: 0.5, duration: 1 }}
-      className="fixed left-0 right-0 flex w-full justify-center top-[5rem] pb-[4rem]"
+      className="z-50 fixed left-0 right-0 flex w-full justify-center top-[5rem] pb-[4rem]"
     >
       <div className="flex gap-[0.6rem]">
         {routes.map((data) => {

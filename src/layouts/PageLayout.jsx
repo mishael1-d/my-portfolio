@@ -13,10 +13,10 @@ function PageLayout() {
       {isDesktop && (
         <>
           <Sidebar />
+          <BottomDotNav pathname={location.pathname} />
           <main className="ml-[8rem] relative top-[13rem] pl-[9.5rem]">
             <Outlet />
           </main>
-          <BottomDotNav pathname={location.pathname} />
         </>
       )}
       {!isDesktop && (
