@@ -7,7 +7,6 @@ import {
   WorkIcon,
 } from "../../utils/icons";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 function BottomNav() {
   return (
@@ -17,21 +16,21 @@ function BottomNav() {
       transition={{ delay: 1, duration: 1 }}
       className="flex fixed bottom-0 py-8 border-t-[1px] w-full justify-center gap-[3rem] bg-[#e6e6e6]"
     >
-      <Link to="/">
+      <a href="/">
         <HomeIcon />
-      </Link>
-      <Link to="/about">
+      </a>
+      <a href="/about">
         <AboutIcon />
-      </Link>
-      <Link to="/portfolio">
+      </a>
+      <a href="/portfolio">
         <WorkIcon />
-      </Link>
-      <Link to="/blog">
+      </a>
+      <a href="/blog">
         <BlogIcon />
-      </Link>
-      <Link to="/">
+      </a>
+      <a href="/">
         <ContactIcon />
-      </Link>
+      </a>
     </motion.div>
   );
 }
