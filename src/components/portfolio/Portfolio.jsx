@@ -17,9 +17,9 @@ function Portfolio() {
         {projectData.map((project) => {
           return (
             <motion.div
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 2 }}
               className="relative md:odd:top-[13.2rem] bg-[#f7f7f7] border-[8px] border-white box-shadow rounded-md md:w-[32rem] lg:w-[40rem] mb-[2rem]"
             >
               <div className="relative py-[1.5rem] px-[2.3rem]">

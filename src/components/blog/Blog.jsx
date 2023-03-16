@@ -21,7 +21,7 @@ function Blog() {
         transition={{ duration: 1.5 }}
         className=""
       >
-        <picture className="relative blog">
+        <picture className="relative">
           <img
             src="/assets/blog-banner.png"
             alt=""
@@ -41,8 +41,11 @@ function Blog() {
       >
         {blogData.map((article) => {
           return (
-            <div
+            <motion.div
               key={article.id}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 2 }}
               className="md:flex justify-between gap-[2.4rem]"
             >
               <picture>
@@ -62,7 +65,7 @@ function Blog() {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </motion.div>
