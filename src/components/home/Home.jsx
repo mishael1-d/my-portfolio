@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Buttons from "../../UIComponents/Buttons";
 import {
   GithubIcon,
@@ -12,6 +12,9 @@ import "./home.css";
 
 function Home() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="app-container">
       <div
@@ -29,7 +32,7 @@ function Home() {
               initial={{ y: "-100vh" }}
               animate={{ y: 0 }}
               transition={{ duration: 1 }}
-              className={`text-[4.8rem] text-[#2E2E2E] leading-[5.9rem] ${
+              className={`text-[4.8rem] text-[#2E2E2E] dark:!text-[#F5F5F5] leading-[5.9rem] ${
                 !isDesktop && "mt-4"
               }`}
             >
@@ -40,7 +43,7 @@ function Home() {
               initial={{ x: "-100vw" }}
               animate={{ x: 0 }}
               transition={{ duration: 1.2 }}
-              className={`text-[4.8rem] text-[#2E2E2E] leading-[5.9rem] ${
+              className={`text-[4.8rem] text-[#2E2E2E] dark:!text-[#F5F5F5] leading-[5.9rem] ${
                 !isDesktop && "mt-4"
               }`}
             >
@@ -53,14 +56,16 @@ function Home() {
             transition={{ delay: 1, duration: 1.2 }}
             className="flex items-center gap-[1.4rem]"
           >
-            <div className="w-[9.5rem] h-[1px] bg-[#363636]"></div>
-            <p className="text-[2.4rem] text-[#2E2E2E]">Frontend Engineer</p>
+            <div className="w-[9.5rem] h-[1px] bg-[#363636] dark:bg-[#F5F5F5]"></div>
+            <p className="text-[2.4rem] text-[#2E2E2E] dark:!text-[#F5F5F5]">
+              Frontend Engineer
+            </p>
           </motion.div>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1.2 }}
-            className={`text-[2rem] leading-[2.4rem]  ${
+            className={`text-[2rem] leading-[2.4rem text-[#2E2E2E] dark:!text-[#F5F5F5]  ${
               isDesktop
                 ? "max-w-[45.5rem] text-justify"
                 : "max-w-full text-left"

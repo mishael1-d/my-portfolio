@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { projectData } from "./project.data";
 import "./portfolio.css";
 function Portfolio() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="app-container pb-[4rem]">
       <motion.h3

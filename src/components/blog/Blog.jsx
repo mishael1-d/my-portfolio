@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { blogData } from "./blogData";
 import { ShareIcon } from "../../utils/icons";
 import Buttons from "../../UIComponents/Buttons";
 
 function Blog() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="app-container relative pb-[4rem]">
       <motion.h3

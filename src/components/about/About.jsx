@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Buttons from "../../UIComponents/Buttons";
 import { motion } from "framer-motion";
 import { DocIcon } from "../../utils/icons";
@@ -7,6 +7,9 @@ import "./about.css";
 
 function About() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="app-container">
       <div
@@ -25,7 +28,7 @@ function About() {
                 alt=""
                 className="about__image"
               />
-              <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#363636] z-[-1] scale-[.97] rounded-[1.5rem]"></div>
+              <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#363636] dark:!bg-[#F5F5F5] z-[-1] scale-[.97] rounded-[1.5rem]"></div>
             </picture>
           </motion.div>
         ) : null}
@@ -38,7 +41,7 @@ function About() {
             initial={{ y: "-100vh" }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`text-black text-[4.8rem] ${
+            className={`text-black text-[4.8rem] dark:!text-[#F5F5F5] ${
               !isDesktop && "text-center"
             }`}
           >
@@ -57,7 +60,7 @@ function About() {
                   alt=""
                   className="about__image"
                 />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#363636] z-[-1] rounded-[1.5rem]"></div>
+                <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#363636] dark:!bg-[#F5F5F5] z-[-1] rounded-[1.5rem]"></div>
               </picture>
             </motion.div>
           ) : null}
@@ -65,7 +68,7 @@ function About() {
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
-            className="text-[rgba(54, 54, 54, 0.76)] text-[2rem]"
+            className="text-[rgba(54, 54, 54, 0.76)] dark:!text-[#F5F5F5] text-[2rem]"
           >
             I am a Frontend Engineer based in Nigeria. I have always been
             passionate about solving problems, and I am fortunate enough to have
@@ -79,7 +82,7 @@ function About() {
             initial={{ y: "100vh" }}
             animate={{ y: 0 }}
             transition={{ delay: 0.2, duration: 1 }}
-            className="text-[rgba(54, 54, 54, 0.76)] text-[2rem]"
+            className="text-[rgba(54, 54, 54, 0.76)] dark:!text-[#F5F5F5] text-[2rem]"
           >
             In this portfolio, you will find a selection of my best work,
             showcasing my skills and experience in Frontend Engineering. From

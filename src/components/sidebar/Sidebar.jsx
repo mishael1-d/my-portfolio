@@ -8,6 +8,7 @@ import {
 } from "../../utils/icons";
 import "./sidebar.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -15,7 +16,7 @@ function Sidebar() {
       initial={{ x: "-100vw", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed left-0 top-0 bg-white p-[2.5rem] w-[8rem] min-h-screen flex flex-col justify-between items-center z-10`}
+      className={`fixed left-0 top-0 bg-white dark:bg-[#4a4a4a] p-[2.5rem] w-[8rem] min-h-screen flex flex-col justify-between items-center z-10`}
     >
       <motion.a
         initial={{ y: "-100vh" }}
@@ -23,7 +24,7 @@ function Sidebar() {
         transition={{ delay: 0.5 }}
         href="#home"
       >
-        <p className="font-extrabold text-[2.5rem]">M.</p>
+        <p className="font-extrabold text-[2.5rem] dark:text-white">M.</p>
       </motion.a>
       <motion.nav
         initial={{ opacity: 0 }}
@@ -39,12 +40,12 @@ function Sidebar() {
               transition={{ delay: 0.6, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <HomeIcon />
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
@@ -52,12 +53,12 @@ function Sidebar() {
               transition={{ delay: 0.7, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <AboutIcon />
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
@@ -65,12 +66,12 @@ function Sidebar() {
               transition={{ delay: 0.9, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="/portfolio"
+              <Link
+                to="/portfolio"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <WorkIcon />
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
@@ -78,12 +79,12 @@ function Sidebar() {
               transition={{ delay: 1.1, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="/blog"
+              <Link
+                to="/blog"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <BlogIcon />
-              </a>
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0 }}
@@ -91,12 +92,12 @@ function Sidebar() {
               transition={{ delay: 1.3, duration: 0.2 }}
               className="nav__item"
             >
-              <a
-                href="#home"
+              <Link
+                to="#home"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <ContactIcon />
-              </a>
+              </Link>
             </motion.li>
           </ul>
         </div>
