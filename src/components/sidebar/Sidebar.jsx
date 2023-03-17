@@ -93,7 +93,7 @@ function Sidebar() {
               className="nav__item"
             >
               <Link
-                to="#home"
+                to="/contact"
                 className="text-[2.5rem] font-700 hover:text-blue-700"
               >
                 <ContactIcon />

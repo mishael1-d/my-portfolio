@@ -15,7 +15,7 @@ function BottomNav() {
       initial={{ y: "100vh" }}
       animate={{ y: 0 }}
       transition={{ delay: 1, duration: 1 }}
-      className="flex fixed bottom-0 py-8 border-t-[1px] w-full justify-center gap-[3rem] bg-[#e6e6e6] dark:bg-black"
+      className="flex fixed bottom-0 py-8 border-t-[1px] w-full justify-center gap-[3rem] bg-[#e6e6e6] dark:bg-[#4a4a4a]"
     >
       <Link to="/">
         <HomeIcon />
@@ -29,7 +29,7 @@ function BottomNav() {
       <Link to="/blog">
         <BlogIcon />
       </Link>
-      <Link to="/">
+      <Link to="/contact">
         <ContactIcon />
       </Link>
     </motion.div>

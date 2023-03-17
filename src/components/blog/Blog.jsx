@@ -14,7 +14,7 @@ function Blog() {
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         transition={{ duration: 1 }}
-        className={`text-[4.8rem] text-[#2E2E2E] leading-[5.9rem] mb-[6.7rem]`}
+        className={`text-[4.8rem] text-[#2E2E2E] dark:text-[#f5f5f5] leading-[5.9rem] mb-[6.7rem]`}
       >
         Blog
       </motion.h3>
@@ -52,14 +52,20 @@ function Blog() {
               className="md:flex justify-between gap-[2.4rem]"
             >
               <picture>
-                <img src={article.imageSrc} alt="" />
+                <img
+                  src={article.imageSrc}
+                  alt=""
+                  className="object-none rounded-[1.5rem]"
+                />
               </picture>
-              <div className="flex flex-col py-7 justify-between">
-                <div className="mb-[2rem] md:mb-0">
-                  <h3 className="text-black text-[2rem] font-bold">
+              <div className="flex flex-col pb-7 justify-between mt-[2rem] md:mt-0">
+                <div className="mb-[2rem]">
+                  <h3 className="text-black dark:text-[#f5f5f5] text-[2rem] font-bold">
                     {article.title}
                   </h3>
-                  <p className="text-[1.4rem]">{article.introduction}</p>
+                  <p className="text-[1.4rem] dark:text-[#f5f5f5]">
+                    {article.introduction}
+                  </p>
                 </div>
                 <div className="flex justify-between">
                   <ShareIcon />

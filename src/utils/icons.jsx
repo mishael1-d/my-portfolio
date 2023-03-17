@@ -45,6 +45,6 @@ export const SendIcon = () => (
 export const DocIcon = () => (
   <HiOutlineDocumentDownload size={22} color="#ffffff" className="dark:!text-black" />
 );
-export const ShareIcon = () => <AiOutlineShareAlt size={25} color="#363636" />;
+export const ShareIcon = () => <AiOutlineShareAlt size={25} color="#363636" className="dark:!text-[#f5f5f5]" />;
 export const MoonIcon = () => <FaRegMoon size={20} />;
 export const SunIcon = () => <BsSun size={20} />;

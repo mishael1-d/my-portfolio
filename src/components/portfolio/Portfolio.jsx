@@ -12,7 +12,7 @@ function Portfolio() {
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         transition={{ duration: 1 }}
-        className={`text-[4.8rem] text-[#2E2E2E] leading-[5.9rem] mb-4`}
+        className={`text-[4.8rem] text-[#2E2E2E] dark:text-[#F5F5F5] leading-[5.9rem] mb-4`}
       >
         Portfolio
       </motion.h3>
@@ -23,15 +23,16 @@ function Portfolio() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 2 }}
-              className="relative md:odd:top-[13.2rem] bg-[#f7f7f7] border-[8px] border-white box-shadow rounded-md md:w-[32rem] lg:w-[40rem] mb-[2rem]"
+              className="relative md:odd:top-[13.2rem] bg-[#f7f7f7] dark:bg-[#4A4A4A] border-[8px]   border-white box-shadow rounded-md md:w-[32rem] lg:w-[40rem] mb-[2rem]"
+              key={project.id}
             >
-              <div className="relative py-[1.5rem] px-[2.3rem]">
+              <div className="relative py-[1.5rem] px-[2.3rem] dark:text-[#f5f5f5]">
                 <h4 className="text-[2rem] font-semibold mb-2">
                   {project.title}
                 </h4>
                 <p className="text-[1.4rem]">{project.description}</p>
               </div>
-              <picture key={project.id} className="block w-full ">
+              <picture className="block w-full ">
                 <img
                   src={`/assets/${project.imageSrc}`}
                   alt=""
