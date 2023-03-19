@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { MoonIcon, SunIcon } from "../utils/icons";
+import { motion } from "framer-motion";
 
 function ThemeSwitcher() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
@@ -32,35 +33,40 @@ function ThemeSwitcher() {
       window.localStorage.setItem("darkMode", "light");
     }
   };
+  const spring = {
+    type: "spring",
+    stiffness: 100,
+    damping: 5,
+  };
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1 }}
       className={`fixed ${
         isDesktop ? "right-[6rem] top-[3rem]" : "right-[1rem] top-[1rem]"
       } cursor-pointer z-40`}
       onClick={toggleThemeMode}
     >
       <div
-        className={`${
-          darkMode === "light" ? "bg-black text-white" : "bg-white text-black"
-        } w-[5rem] h-[2rem]  flex relative rounded-[1.5rem] cursor-pointer`}
+        data-theme={darkMode}
+        className={`${darkMode === "light" ? "bg-black" : "bg-white"} 
+        data-[theme=light]:justify-start data-[theme=dark]:justify-end
+        w-[5rem] h-[2rem]  flex relative rounded-[1.5rem] cursor-pointer`}
       >
-        <div
+        <motion.div
+          layout
+          transition={spring}
           className={`${
-            darkMode === "light" ? "block left-0" : "right-0 hidden"
-          } bg-white text-black rounded-full cursor-pointer absolute duration-500`}
+            darkMode === "light"
+              ? "block bg-white text-black"
+              : "block bg-black text-white"
+          }   rounded-full cursor-pointer absolute duration-500`}
         >
-          <MoonIcon />
-        </div>
-
-        <div
-          className={`${
-            darkMode === "dark" ? "block right-0" : "left-0 hidden"
-          } bg-black text-white rounded-full cursor-pointer absolute duration-500`}
-        >
-          <SunIcon />
-        </div>
+          {darkMode === "light" ? <MoonIcon /> : <SunIcon />}
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

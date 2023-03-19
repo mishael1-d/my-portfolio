@@ -22,7 +22,7 @@ function Sidebar() {
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         transition={{ delay: 0.5 }}
-        href="#home"
+        href="/"
       >
         <p className="font-extrabold text-[2.5rem] dark:text-white">M.</p>
       </motion.a>
@@ -106,10 +106,19 @@ function Sidebar() {
         initial={{ y: "100vh" }}
         animate={{ y: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="nav__footer"
+        className="nav__footer flex"
       >
         <span className="text-[1.2rem] text-slate-400 -rotate-180 copyright">
           &copy; 2023. Mishael Dada
+        </span>
+        <span className="text-[1.2rem] text-slate-400 -rotate-180 copyright">
+          <a
+            href="https://www.linkedin.com/in/chiroma-benjamin-5281521b7/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Design By Benjamin
+          </a>
         </span>
       </motion.div>
     </motion.aside>

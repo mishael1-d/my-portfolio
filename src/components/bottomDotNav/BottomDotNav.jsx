@@ -13,7 +13,7 @@ function BottomDotNav({ pathname }) {
       <div className="flex gap-[0.6rem]">
         {routes.map((data) => {
           return (
-            <Link to={data.path}>
+            <Link to={data.path} key={data.path}>
               <div
                 className={`w-[2.6rem] h-[4px] ${
                   pathname === data.path ? "bg-[#363636]" : "bg-[#939393]"

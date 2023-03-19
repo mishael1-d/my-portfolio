@@ -108,7 +108,9 @@ function Home() {
             animate={{ y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <Buttons text="say hello" icon={<SendIcon />} />
+            <a href="/contact">
+              <Buttons text="say hello" icon={<SendIcon />} />
+            </a>
           </motion.div>
         </div>
         {isDesktop ? (

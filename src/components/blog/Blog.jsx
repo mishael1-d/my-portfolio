@@ -49,7 +49,7 @@ function Blog() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 2 }}
-              className="md:flex justify-between gap-[2.4rem]"
+              className="md:flex justify-between md:gap-[2.4rem] mb-[2.4rem]"
             >
               <picture>
                 <img

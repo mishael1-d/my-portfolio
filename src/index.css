@@ -13,7 +13,7 @@ html {
 .app-container {
   max-width: 115.3rem;
   margin-right: 10rem;
-  /* overflow: auto; */
+  overflow: visible;
 }
 
 @media screen and (max-width: 821px) {
