@@ -28,7 +28,7 @@ function Blog() {
           <img
             src="/assets/blog-banner.png"
             alt=""
-            className="relative z-40 opacity-[52%]"
+            className="relative z-40 opacity-[52%] w-full"
           />
           <div className="absolute inset-0 bg-[#363636]  z-30"></div>
           <p className="absolute top-0 bottom-0 right-0 left-0 z-50 text-white flex justify-center items-center font-semibold md:text-[4.8rem] text-[3rem]">
