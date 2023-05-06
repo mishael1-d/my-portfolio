@@ -6,7 +6,7 @@ import {
   AiOutlineShareAlt,
 } from "react-icons/ai";
 import { FiEdit, FiHome } from "react-icons/fi";
-import { TbBriefcase, TbHeadset, TbSend } from "react-icons/tb";
+import { TbBriefcase, TbHeadset, TbSend, TbExternalLink } from "react-icons/tb";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
 import { FaRegMoon } from "react-icons/fa";
 import { BsSun } from "react-icons/bs";
@@ -48,3 +48,4 @@ export const DocIcon = () => (
 export const ShareIcon = () => <AiOutlineShareAlt size={25} color="#363636" className="dark:!text-[#f5f5f5]" />;
 export const MoonIcon = () => <FaRegMoon size={20} />;
 export const SunIcon = () => <BsSun size={20} />;
+export const LinkIcon =() => <TbExternalLink size={20} color="#363636" className="dark:!text-[#f5f5f5] cursor-pointer"/>

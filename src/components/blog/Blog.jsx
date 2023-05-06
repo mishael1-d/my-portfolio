@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { blogData } from "./blogData";
-import { ShareIcon } from "../../utils/icons";
 import Buttons from "../../UIComponents/Buttons";
 
 function Blog() {
@@ -51,11 +50,11 @@ function Blog() {
               transition={{ duration: 2 }}
               className="md:flex justify-between md:gap-[2.4rem] mb-[2.4rem]"
             >
-              <picture>
+              <picture className="block">
                 <img
                   src={article.imageSrc}
                   alt=""
-                  className="object-none rounded-[1.5rem]"
+                  className=" rounded-[1.5rem] h-fit"
                 />
               </picture>
               <div className="flex flex-col pb-7 justify-between mt-[2rem] md:mt-0">
@@ -67,25 +66,31 @@ function Blog() {
                     {article.introduction}
                   </p>
                 </div>
-                <div className="flex justify-between">
-                  <ShareIcon />
+                <a
+                  className="flex justify-end"
+                  href={article.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="bg-white text-black shadow-md px-[3rem] py-[1rem] text-[1.4rem] font-semibold rounded-lg cursor-pointer">
                     Read More
                   </button>
-                </div>
+                </a>
               </div>
             </motion.div>
           );
         })}
       </motion.div>
-      <motion.div
+      <motion.a
         initial={{ y: "100vh" }}
         animate={{ y: 0 }}
         transition={{ duration: 1 }}
         className="w-full mt-[4rem] flex justify-center"
+        href="https://mish-blog.hashnode.dev/"
+        target="_blank"
       >
-        <Buttons text="Load More" />
-      </motion.div>
+        <Buttons text="Read All My Articles" />
+      </motion.a>
     </div>
   );
 }

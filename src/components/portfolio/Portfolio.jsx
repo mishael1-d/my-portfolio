@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { projectData } from "./project.data";
 import "./portfolio.css";
+import { LinkIcon } from "../../utils/icons";
 function Portfolio() {
   useEffect(() => {
     window.scroll(0, 0);
@@ -23,13 +24,22 @@ function Portfolio() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 2 }}
-              className="relative md:odd:top-[13.2rem] bg-[#f7f7f7] dark:bg-[#4A4A4A] border-[8px]   border-white box-shadow rounded-md md:w-[32rem] lg:w-[40rem] mb-[2rem]"
+              className="relative md:odd:top-[13.2rem] bg-[#f7f7f7] dark:bg-[#4A4A4A] border-[8px] h-fit  border-white box-shadow rounded-md md:w-[32rem] lg:w-[40rem] mb-[2rem]"
               key={project.id}
             >
               <div className="relative py-[1.5rem] px-[2.3rem] dark:text-[#f5f5f5]">
-                <h4 className="text-[2rem] font-semibold mb-2">
-                  {project.title}
-                </h4>
+                <div className="flex justify-between items-start">
+                  <h4 className="text-[1.8rem] font-semibold mb-2">
+                    {project.title}
+                  </h4>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkIcon />
+                  </a>
+                </div>
                 <p className="text-[1.4rem]">{project.description}</p>
               </div>
               <picture className="block w-full ">
