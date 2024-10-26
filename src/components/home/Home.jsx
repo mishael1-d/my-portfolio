@@ -18,23 +18,20 @@ function Home() {
   return (
     <div className="app-container">
       <div
-        className={`flex ${
-          !isDesktop && "flex-col-reverse items-center justify-center"
-        } justify-between`}
+        className={`flex ${!isDesktop && "flex-col-reverse items-center justify-center"
+          } justify-between`}
       >
         <div
-          className={`flex flex-col gap-[2rem] ${
-            isDesktop ? "max-w-[58.6rem]" : "max-w-full"
-          }`}
+          className={`flex flex-col gap-[2rem] ${isDesktop ? "max-w-[58.6rem]" : "max-w-full"
+            }`}
         >
           {isDesktop ? (
             <motion.h3
               initial={{ y: "-100vh" }}
               animate={{ y: 0 }}
               transition={{ duration: 1 }}
-              className={`text-[4.8rem] text-[#2E2E2E] dark:!text-[#F5F5F5] leading-[5.9rem] ${
-                !isDesktop && "mt-4"
-              }`}
+              className={`text-[4.8rem] text-[#2E2E2E] dark:!text-[#F5F5F5] leading-[5.9rem] ${!isDesktop && "mt-4"
+                }`}
             >
               Dada Mishael
             </motion.h3>
@@ -43,9 +40,8 @@ function Home() {
               initial={{ x: "-100vw" }}
               animate={{ x: 0 }}
               transition={{ duration: 1.2 }}
-              className={`text-[4.8rem] text-[#2E2E2E] dark:!text-[#F5F5F5] leading-[5.9rem] ${
-                !isDesktop && "mt-4"
-              }`}
+              className={`text-[4.8rem] text-[#2E2E2E] dark:!text-[#F5F5F5] leading-[5.9rem] ${!isDesktop && "mt-4"
+                }`}
             >
               Dada Mishael
             </motion.h3>
@@ -58,22 +54,19 @@ function Home() {
           >
             <div className="w-[9.5rem] h-[1px] bg-[#363636] dark:bg-[#F5F5F5]"></div>
             <p className="text-[2.4rem] text-[#2E2E2E] dark:!text-[#F5F5F5]">
-              Frontend Engineer
+              Software Developer
             </p>
           </motion.div>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1.2 }}
-            className={`text-[2rem] leading-[2.4rem text-[#2E2E2E] dark:!text-[#F5F5F5]  ${
-              isDesktop
-                ? "max-w-[45.5rem] text-justify"
-                : "max-w-full text-left"
-            } `}
+            className={`text-[2rem] leading-[2.4rem text-[#2E2E2E] dark:!text-[#F5F5F5]  ${isDesktop
+              ? "max-w-[45.5rem] text-justify"
+              : "max-w-full text-left"
+              } `}
           >
-            I am a Frontend Engineer based in Nigeria. I have always been
-            passionate about solving problems, and I am fortunate enough to have
-            turned that passion into my profession.
+            I am a versatile software engineer specializing in React and Next.js for frontend development, with full-stack capabilities using Firebase and Node.js. I develop Shopify stores with Liquid and build AI chatbots with Botpress and Langchain. Committed to innovation, I aim to contribute to projects that advance technology and enhance user experience.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}

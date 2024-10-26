@@ -17,7 +17,7 @@ function Portfolio() {
       >
         Portfolio
       </motion.h3>
-      <div className="grid md:grid-cols-2 md:gap-x-[10rem] md:gap-y-[13.2rem] gap-y-[2rem]">
+      <div className="grid md:grid-cols-3 md:gap-x-[10rem] md:gap-y-[13.2rem] gap-y-[2rem]">
         {projectData.map((project) => {
           return (
             <motion.div
